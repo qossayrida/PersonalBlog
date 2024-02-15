@@ -849,15 +849,15 @@ body.nav-active { overflow: hidden; }
 \*-----------------------------------*/
 
 .footer {
+  display: flex; /* Use flexbox to arrange children */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  justify-content: center; /* Center children vertically */
   padding-inline: 20px;
   border-radius: var(--radius-48);
   color: var(--text-wild-blue-yonder);
   margin-block-end: 24px;
-}
-
-.footer-top {
-  display: grid;
-  gap: 20px;
+  text-align: center; /* Center the text within the children */
 }
 
 .footer-brand .footer-text { font-size: var(--fontSize-6); }
@@ -902,8 +902,14 @@ body.nav-active { overflow: hidden; }
 }
 
 .footer-bottom {
+  display: flex; /* Enables Flexbox */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  text-align: center; /* Centers text for any inline elements or text */
   border-block-start: 1px solid var(--border-prussian-blue);
-  padding-block: 50px;
+  padding-block: 50px; /* Adjust this value as needed */
+  width: 100%; /* Ensures it takes the full width of its parent */
+  flex-direction: column; /* Stacks flex items vertically */
 }
 
 .copyright {
